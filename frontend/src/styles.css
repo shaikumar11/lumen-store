@@ -1,0 +1,26 @@
+:root{--bg:#fbfbfd;--card:#fff;--tx:#1d1d1f;--mut:#6e6e73;--line:#e5e5ea;--acc:#0a66ff;--ok:#1a7f37;--wa:#b45309;--er:#c62828}
+@media(prefers-color-scheme:dark){:root{--bg:#000;--card:#161618;--tx:#f5f5f7;--mut:#a1a1a6;--line:#2c2c2e;--acc:#4c8dff;--ok:#4ade80;--wa:#fbbf24;--er:#f87171}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.5 -apple-system,"Segoe UI",Inter,Arial,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}h1{font-size:clamp(32px,5vw,52px);line-height:1.08;margin:0 0 12px;letter-spacing:-.02em}h2{font-size:28px;margin:0 0 16px}h3{margin:8px 0 2px;font-size:19px}
+.mut,.hint{color:var(--mut)}.hint,.stock{font-size:14px}.sr{position:absolute;left:-9999px}.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:var(--card);padding:8px;z-index:9}
+.top{display:flex;justify-content:space-between;align-items:center;padding:0 24px;height:52px;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.brand{font-weight:700;font-size:20px;color:var(--tx)}nav{display:flex;gap:22px;font-size:14px}nav a{color:var(--tx)}
+.hero{text-align:center;padding:90px 20px 80px;background:radial-gradient(800px 360px at 50% 0,#1a3a8a,#000 70%);color:#f5f5f7}.hero h1{max-width:760px;margin:0 auto 12px}.hero p{color:#c7c7cc;font-size:21px}.eyebrow{letter-spacing:.2em;text-transform:uppercase;font-size:13px!important}
+.btn{display:inline-block;background:var(--acc);color:#fff!important;border:0;border-radius:99px;padding:11px 24px;font:inherit;font-weight:600;cursor:pointer;margin-top:14px}.btn:hover{text-decoration:none;filter:brightness(1.1)}.btn:disabled{opacity:.4;cursor:not-allowed}
+.wrap{max-width:1100px;margin:0 auto;padding:40px 20px}.narrow{max-width:520px}
+.bar2{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:20px}.chips{display:flex;gap:8px;flex-wrap:wrap;flex:1}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:99px;padding:6px 16px;font:inherit;font-size:15px;cursor:pointer;margin:0 6px 6px 0}.chip.on{background:var(--tx);color:var(--bg)}
+input,select{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--tx);font:inherit;width:100%}.bar2 input,.bar2 select{width:auto}
+label{display:block;margin:14px 0 4px;color:var(--mut);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;color:var(--tx);display:block;transition:transform .2s,box-shadow .2s}
+a.card:hover{transform:translateY(-4px);box-shadow:0 12px 30px #0002;text-decoration:none}.art{width:100%;max-height:200px}
+.stock{color:var(--ok);margin-left:6px}.stock.low{color:var(--wa)}.stock.out{color:var(--er)}
+.pp{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}@media(max-width:760px){.pp{grid-template-columns:1fr}}.lead{font-size:22px;color:var(--mut)}.price{font-size:28px;font-weight:700}
+fieldset{border:0;padding:0;margin:16px 0}legend{color:var(--mut);margin-bottom:8px}
+.line{display:grid;grid-template-columns:90px 1fr auto 110px;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}.line .art{max-height:70px}.line b:last-child{text-align:right}
+.sq{width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--tx);cursor:pointer}.total{text-align:right;font-size:22px}
+.err{color:var(--er);font-size:14px}.link{background:none;border:0;color:var(--acc);font:inherit;cursor:pointer;padding:0}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 18px;border-radius:99px;opacity:0;transition:.3s;pointer-events:none}.toast:not(:empty){opacity:1}
+footer{text-align:center;color:var(--mut);font-size:13px;padding:40px 20px;border-top:1px solid var(--line)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

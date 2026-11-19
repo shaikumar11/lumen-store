@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    environment: { POSTGRES_USER: lumen, POSTGRES_PASSWORD: lumen, POSTGRES_DB: lumen }
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql://lumen:lumen@db:5432/lumen
+      SECRET_KEY: change-me-in-real-use
+      SEED_DEMO: "1"
+      CORS_ORIGINS: http://localhost:5173
+    ports: ["8000:8000"]
+    depends_on: [db]
+volumes:
+  pgdata:
